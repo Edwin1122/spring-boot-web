@@ -13,6 +13,18 @@ public class SimpleController {
     @GetMapping("/")
     public String homePage(Model model) {
         model.addAttribute("appName", appName);
+        return "home";
+    }
+
+    @GetMapping("/demo")
+    public String demoPage(Model model) {
+        model.addAttribute("appName", appName);
         return "demo";
+    }
+
+    @GetMapping("/index")
+    public String indexPage(Model model) {
+//        model.addAttribute("appName", appName);
+        return "index";
     }
 }
