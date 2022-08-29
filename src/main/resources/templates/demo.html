@@ -9,6 +9,8 @@
     <script type="text/javascript" th:src="@{/js/demo.js}"></script>
 
 
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+    <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
 </head>
 <body>
 <h2>Style Heading H2</h2>
@@ -18,5 +20,21 @@
 
 <button type="button" th:onclick="showAlert()">Show Alert</button>
 
+
+<button type="button" id="hide">Hide</button>
+<button type="button" id="show">Show</button>
+
 </body>
 </html>
+
+<script>
+    $(document).ready(function(){
+        $("#hide").click(function(){
+            $("p").hide();
+        });
+
+        $("#show").click(function(){
+            $("p").show();
+        });
+    });
+</script>
